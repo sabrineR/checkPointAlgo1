@@ -1,0 +1,27 @@
+ALGORITHM sentence
+VAR
+    l,w,v:INTEGER;
+    c:CHAR;
+    l:=0;
+    w:=0;
+    v:=0;
+    
+
+BEGIN
+    WHILE (c<>.) DO
+        read(c);
+        IF (c<>" ") THEN
+            l++;
+            IF (c:='A' or 'a' or 'E' or 'e' or 'I' or 'i' or 'O' or 'o' or 'U' or 'u' or 'Y' or 'y') THEN
+                v++;
+            END_IF
+        ELSE
+            w++
+        END_IF
+
+    END_WHILE
+
+    write(l+1);
+    write(w+1);
+    write(v);
+END
